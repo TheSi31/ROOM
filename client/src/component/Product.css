@@ -1,0 +1,125 @@
+.product {
+    perspective: 1000px;
+    width: 250px;
+    height: 375px;
+    margin: 20px;
+}
+
+.product-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product.flipped .product-inner {
+    transform: rotateY(180deg);
+}
+
+.product-front,
+.product-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-front {
+    background-color: white;
+}
+
+.product-back {
+    background-color: #f8f8f8;
+    transform: rotateY(180deg);
+}
+.product-content-back{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.product-content-back button{
+    margin-top: auto;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-content p {
+    font-size: 16px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    padding: 10px 20px 10px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 100px 0px 0px 0px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+.product-buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 92%;
+    left: 0;
+    border-radius: 0px 100px 0px 0px;
+    background-color: #41e500;
+}
+.product-buy:hover{
+    background-color: #34b400;
+}
+.product-buy img{
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}

@@ -1,0 +1,15 @@
+{
+    "includes" :[
+        "src",
+        "./src/*.d.ts"
+      ],
+    "compilerOptions": {
+      "target": "es5",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "jsx": "react",
+      "strict": true,
+      "esModuleInterop": true
+    },
+    "include": ["src/**/*", "i18n.ts"]
+  }

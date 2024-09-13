@@ -1,0 +1,207 @@
+.header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.burger{
+    display: none;
+    margin-right: auto;
+}
+.burger span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+.top{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    background-color: rgba(244, 244, 244);
+    color:rgba(170, 170, 170);
+    height: 40px;
+    gap:15px;
+}
+.top select{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background-color: rgba(244, 244, 244);
+    color:rgba(170, 170, 170);
+}
+.top option{
+    background-color: rgba(244, 244, 244);
+    color:rgba(170, 170, 170);
+}
+.menu{
+    margin:25px 50px 25px 144px;
+    display: flex;
+    font-family: 'Roboto';
+    transition: all 0.3s;
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    gap:100px;
+    list-style-type: none;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: gap 0.2s;
+}
+.menu li:first-child {
+    margin-left: 100px;
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    display: grid;
+    font-family: 'Roboto';
+    font-size: medium;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 25px 25px;
+    grid-template-rows: 25px 25px;
+}
+.extras{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-left: auto;
+}
+.extras a{
+    display: flex;
+}
+.select-wrapper select {
+    height: 50px;
+    font-size: 16px;
+    border: 0px;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.select-wrapper .custom-arrow {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -25px;
+    width: 20px;
+    height: 24px; 
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu ul {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    .burger_open{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+        margin-right: auto;
+        position: relative;
+    }
+    .burger_open span{
+        display: flex;
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        margin-bottom: 5px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    .burger_open span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .burger_open span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    .burger_open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    .menu{
+        margin: 25px 20px 25px 50px;
+    }
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        background-color: rgba(244, 244, 244, 0.9);
+        position: absolute;
+        top: 140px;
+        left: 0;
+        width: calc(100% - 40px);
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 5;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: all 0.5s ease;
+        pointer-events: none;
+    }
+    .menu ul.open {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events:all;
+        z-index: 100;
+    }
+    .menu li:first-child {
+        margin-left: 0px;
+    }
+    .menu li a {
+        display: flex;
+        align-items: center;
+        
+    }
+    .menu li, .menu li a{
+        width: 100%;
+        height: 58px;
+    }
+    .logo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media  screen and (max-width: 350px) {
+    .menu{
+        margin: 25px 20px 25px 20px;
+    }
+    .select-wrapper select {
+        font-size: 14px;
+    }
+}
+
